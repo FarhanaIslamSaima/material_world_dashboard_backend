@@ -1,11 +1,10 @@
-export const textCheck=async(request,response)=>{
+export const addPost=async(req,res)=>{
     try{
-        console.log("Hello Whatsapp");
-        response.status(200).json("Hello Whats Up");
+        res.status(200).json(req.body);
 
     }
     catch(error){
-        response.status(500).json(error);
+        res.status(500).json(error)
     }
 
 }

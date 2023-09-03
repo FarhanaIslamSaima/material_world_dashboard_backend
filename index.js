@@ -3,11 +3,11 @@ import { fileURLToPath } from 'url'
 import path from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-
+import Route from './Router/route.js'
 import express from "express"
 import Cors from "cors"
 import bodyParser from "body-parser"
-import Route from "./route/Router.js";
+
 
 const app=express();
 app.use(Cors());
