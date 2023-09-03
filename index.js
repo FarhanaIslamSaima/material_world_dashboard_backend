@@ -7,6 +7,7 @@ import Route from './Router/route.js'
 import express from "express"
 import Cors from "cors"
 import bodyParser from "body-parser"
+import { connection } from './database/db.js'
 
 
 const app=express();
@@ -23,3 +24,4 @@ app.get('/test', function(req, res) {
 app.listen(port,()=>{
     console.log("Server connected succefully at http://localhost:8000/test");
 })
+connection();
