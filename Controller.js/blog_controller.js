@@ -14,3 +14,15 @@ export const addPost=async(req,res)=>{
     }
 
 }
+export const getPost=async(request,response)=>{
+    try{
+        const data=await blogmodel.find({})
+        response.status(200).json(data);
+
+    }
+    catch(error){
+        response.status(500).json(error)
+
+    }
+
+}
